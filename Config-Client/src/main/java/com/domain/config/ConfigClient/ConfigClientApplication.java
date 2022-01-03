@@ -19,9 +19,12 @@ public class ConfigClientApplication {
   @Value("${message:default config}")
 	private String config;
 
+  @Value("${password}")
+  private String password;
+
   @GetMapping("/config")
   public String getConfig() {
-		return  config;
+		return  password;
   }
 
 }
